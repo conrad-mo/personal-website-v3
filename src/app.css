@@ -1,1 +1,14 @@
 @import 'tailwindcss';
+
+:root {
+	--foreground: rgb(255, 255, 255);
+	--background: rgb(26, 28, 30);
+}
+
+html,
+body {
+	font-family: 'Inter', sans-serif;
+	color: var(--foreground);
+	background: var(--background);
+	height: 100%;
+}
