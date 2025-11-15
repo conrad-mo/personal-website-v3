@@ -1,4 +1,8 @@
-<div class="mx-64 my-16 flex min-h-screen flex-col gap-4">
+<script>
+	import Icon from '@iconify/svelte';
+</script>
+
+<div class="mx-64 my-32 flex min-h-screen flex-col gap-8">
 	<div class="flex flex-col gap-2 text-2xl text-gray-400">
 		<h1 class="text-4xl font-bold">
 			<span>👋</span>
@@ -15,18 +19,22 @@
 	</div>
 	<div class="text-gray-400">
 		<h2 class="text-2xl font-medium text-gray-200">About me</h2>
-		<li>
-			<ul>Eating</ul>
-			<ul>Piano</ul>
-			<ul>Building</ul>
-		</li>
+		<ul>
+			<li>Eating</li>
+			<li>Piano</li>
+		</ul>
 	</div>
 	<div class="text-gray-400">
 		<h2 class="text-2xl font-medium text-gray-200">Where I've been</h2>
-		<li>
-			<ul>Shopify</ul>
-			<ul>Hack the Valley</ul>
-			<ul>Northern Labs</ul>
-		</li>
+		<ul>
+			<li>
+				<span class="inline-flex items-center">
+					Shopify
+					<Icon icon="lsicon:open-new-outline" />
+				</span>
+			</li>
+			<li>Hack the Valley</li>
+			<li>Northern Labs</li>
+		</ul>
 	</div>
 </div>
