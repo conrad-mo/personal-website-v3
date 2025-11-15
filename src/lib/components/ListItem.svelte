@@ -1,8 +1,6 @@
 <script>
 	import { ArrowUpRight } from '@lucide/svelte';
-	export let text = '';
-	export let showIcon = false;
-	export let underline = false;
+	const { text = '', showIcon = false, underline = false } = $props();
 </script>
 
 <li>

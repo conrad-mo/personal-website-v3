@@ -14,7 +14,7 @@
 	</div>
 
 	<Section title="Things I do">
-		<ListItem text="Eating" showIcon={true} underline={true} />
+		<ListItem text="Eating" showIcon={true} />
 		<ListItem text="Piano" />
 	</Section>
 
