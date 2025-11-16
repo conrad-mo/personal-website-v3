@@ -3,8 +3,8 @@
 	import ListItem from '$lib/components/ListItem.svelte';
 </script>
 
-<div class=" my-32 flex min-h-screen flex-col items-center text-gray-400">
-	<div class="flex flex-col gap-8 text-gray-400">
+<div class=" flex max-h-screen min-h-screen flex-col items-center justify-center">
+	<div class="flex flex-col gap-8">
 		<div class="flex flex-col gap-2 text-2xl text-gray-400">
 			<h1 class="text-4xl font-bold">
 				<span class="bg-linear-to-r from-[#FFD3A5] to-[#FFB6B0] bg-clip-text text-transparent">
@@ -13,13 +13,18 @@
 			</h1>
 			Computer science student at the University of Toronto
 		</div>
-		I'm a software engineer
+		<div class="text-gray-400">
+			I&apos;m a software engineer passionate about creating software that makes everyday life
+			easier and more enjoyable.<br />
+			I have a strong curiosity, love solving challenging problems, and enjoy collaborating with others
+			to bring ideas to life.
+		</div>
 
 		<Section title="Things I do">
 			<ListItem text="Eating food at new places" showIcon={true} />
 			<ListItem text="Listening to kpop" underline={true} />
 			<ListItem text="Playing piano" />
-			<ListItem text="Running 5ks" />
+			<ListItem text="Going on 5km runs" />
 		</Section>
 
 		<Section title="Where I've been">

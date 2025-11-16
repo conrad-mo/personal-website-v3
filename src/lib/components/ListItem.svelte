@@ -12,7 +12,7 @@
 
 		{#if underline}
 			<span
-				class="absolute bottom-0 left-0 h-0.5 w-0 bg-gray-400 transition-all duration-300 group-hover:w-full"
+				class="absolute bottom-0 left-0 h-0.5 w-0 bg-[#FFB6B0] transition-all duration-300 group-hover:w-full"
 			></span>
 		{/if}
 	</span>
