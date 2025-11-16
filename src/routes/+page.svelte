@@ -45,9 +45,9 @@
 			{:else}
 				<ListItem text="Listen to kpop" />
 			{/if}
-			<ListItem text="Eating food at new places" />
-			<ListItem text="Playing piano" />
-			<ListItem text="Going on 5km runs" />
+			<ListItem text="Eat food at new places" />
+			<ListItem text="Play piano" />
+			<ListItem text="Go on 5km runs" />
 		</Section>
 
 		<Section title="Where I've been">

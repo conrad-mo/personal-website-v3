@@ -15,8 +15,7 @@
 	<svelte:component
 		this={icon}
 		size={20}
-		color="currentColor"
-		class="self-end text-[oklch(70.7%_0.022_261.325)]
+		class="self-end text-gray-400
 		       transition-colors
 		       group-hover:text-[#FFB6B0]"
 	/>
