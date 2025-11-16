@@ -35,15 +35,13 @@
 
 		<Section title="Things I do">
 			<ListItem text="Eating food at new places" showIcon={true} />
-			<ListItem text="Listening to kpop" underline={true} />
-			<ListItem text="Playing piano" />
-			<ListItem text="Going on 5km runs" />
 			{#if currentlyPlaying !== 'nothing'}
 				<ListItem text={`Listening to ${currentlyPlaying}`} underline={true} />
-				<img src={coverImage} alt="Album cover" class="h-16 w-16 rounded" />
 			{:else}
-				<ListItem text="Listening to nothing" />
+				<ListItem text="Listening to kpop" />
 			{/if}
+			<ListItem text="Playing piano" />
+			<ListItem text="Going on 5km runs" />
 		</Section>
 
 		<Section title="Where I've been">
