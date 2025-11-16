@@ -17,7 +17,7 @@
 	});
 </script>
 
-<div class="flex min-h-screen flex-col items-center justify-center px-4 py-8 sm:px-6 md:px-8">
+<main class="flex min-h-screen flex-col items-center justify-center px-4 py-8 sm:px-6 md:px-8">
 	<div class="flex w-full max-w-2xl flex-col gap-6 sm:gap-8">
 		<div class="flex flex-col gap-2 text-lg text-gray-200 sm:text-xl md:text-2xl">
 			<h1 class="text-2xl font-bold sm:text-3xl md:text-4xl">
@@ -65,4 +65,4 @@
 			<p class="text-xs text-gray-400 sm:text-sm">© 2025 Conrad Mo. All rights reserved.</p>
 		</footer>
 	</div>
-</div>
+</main>
