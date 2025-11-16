@@ -7,7 +7,7 @@
 	<span class="group relative inline-flex items-center">
 		- {text}
 		{#if showIcon}
-			<ArrowUpRight size={16} />
+			<ArrowUpRight size={16} color="#FFB6B0" />
 		{/if}
 
 		{#if underline}
