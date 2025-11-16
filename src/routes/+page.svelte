@@ -38,8 +38,6 @@
 			{#if currentlyPlaying !== 'nothing'}
 				<ListItem
 					text={`Listen to ${currentlyPlaying}`}
-					showIcon={true}
-					underline={true}
 					url={`https://open.spotify.com/track/${currentlyPlayingId}`}
 				/>
 			{:else}
@@ -51,24 +49,9 @@
 		</Section>
 
 		<Section title="Where I've been">
-			<ListItem
-				text="Shopify"
-				showIcon={true}
-				underline={true}
-				url={'https://www.shopify.com/ca'}
-			/>
-			<ListItem
-				text="Hack the Valley"
-				showIcon={true}
-				underline={true}
-				url={'https://hackthevalley.io/'}
-			/>
-			<ListItem
-				text="Northern Labs"
-				showIcon={true}
-				underline={true}
-				url={'https://www.northernlabs.ca/'}
-			/>
+			<ListItem text="Shopify" url={'https://www.shopify.com/ca'} />
+			<ListItem text="Hack the Valley" url={'https://hackthevalley.io/'} />
+			<ListItem text="Northern Labs" url={'https://www.northernlabs.ca/'} />
 		</Section>
 		<hr class="border-b border-[#FFB6B0]" />
 		<div class="flex items-end gap-4">
