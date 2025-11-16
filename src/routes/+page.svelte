@@ -2,16 +2,15 @@
 	import Section from '$lib/components/Section.svelte';
 	import ListItem from '$lib/components/ListItem.svelte';
 	import { onMount } from 'svelte';
-	let currentlyPlaying = 'nothing';
-	let coverImage = '';
-
+	let currentlyPlaying = $state('nothing');
+	let currentlyPlayingId = $state('');
 	onMount(async () => {
 		const res = await fetch('/api/spotify');
 		const data = await res.json();
 
 		if (data.playing) {
+			currentlyPlayingId = data.id;
 			currentlyPlaying = `${data.song} - ${data.artist}`;
-			coverImage = data.cover;
 		}
 	});
 </script>
@@ -34,20 +33,40 @@
 		</div>
 
 		<Section title="Things I do">
-			<ListItem text="Eating food at new places" showIcon={true} />
 			{#if currentlyPlaying !== 'nothing'}
-				<ListItem text={`Listening to ${currentlyPlaying}`} underline={true} />
+				<ListItem
+					text={`Listening to ${currentlyPlaying}`}
+					showIcon={true}
+					underline={true}
+					url={`https://open.spotify.com/track/${currentlyPlayingId}`}
+				/>
 			{:else}
-				<ListItem text="Listening to kpop" />
+				<ListItem text="Listen to kpop" />
 			{/if}
+			<ListItem text="Eating food at new places" />
 			<ListItem text="Playing piano" />
 			<ListItem text="Going on 5km runs" />
 		</Section>
 
 		<Section title="Where I've been">
-			<ListItem text="Shopify" showIcon={true} underline={true} />
-			<ListItem text="Hack the Valley" showIcon={true} underline={true} />
-			<ListItem text="Northern Labs" showIcon={true} underline={true} />
+			<ListItem
+				text="Shopify"
+				showIcon={true}
+				underline={true}
+				url={'https://www.shopify.com/ca'}
+			/>
+			<ListItem
+				text="Hack the Valley"
+				showIcon={true}
+				underline={true}
+				url={'https://hackthevalley.io/'}
+			/>
+			<ListItem
+				text="Northern Labs"
+				showIcon={true}
+				underline={true}
+				url={'https://www.northernlabs.ca/'}
+			/>
 		</Section>
 	</div>
 </div>

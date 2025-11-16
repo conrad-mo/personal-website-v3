@@ -9,6 +9,7 @@ interface SpotifyArtist {
 }
 
 interface SpotifyTrack {
+	id: string;
 	name: string;
 	artists: SpotifyArtist[];
 	album: {
@@ -22,6 +23,11 @@ interface SpotifyCurrentlyPlaying {
 }
 
 async function getAccessToken() {
+	if (!SPOTIFY_CLIENT_ID || !SPOTIFY_CLIENT_SECRET || !SPOTIFY_REFRESH_TOKEN) {
+		console.error('Missing Spotify environment variables');
+		throw new Error('Spotify credentials not configured');
+	}
+
 	const params = new URLSearchParams();
 	params.append('grant_type', 'refresh_token');
 	params.append('refresh_token', SPOTIFY_REFRESH_TOKEN);
@@ -36,7 +42,19 @@ async function getAccessToken() {
 		body: params.toString()
 	});
 
+	if (!response.ok) {
+		const errorText = await response.text();
+		console.error('Spotify token error:', response.status, errorText);
+		throw new Error(`Failed to get access token: ${response.status}`);
+	}
+
 	const data = await response.json();
+
+	if (!data.access_token) {
+		console.error('No access token in response:', data);
+		throw new Error('No access token received');
+	}
+
 	return data.access_token;
 }
 
@@ -48,19 +66,39 @@ export async function GET() {
 			headers: { Authorization: `Bearer ${accessToken}` }
 		});
 
-		if (!res.ok) return new Response(JSON.stringify({ playing: false }));
+		if (res.status === 204 || !res.ok) {
+			return new Response(JSON.stringify({ playing: false }), {
+				headers: { 'Content-Type': 'application/json' }
+			});
+		}
 
-		const data: SpotifyCurrentlyPlaying = await res.json();
+		const text = await res.text();
+		if (!text) {
+			return new Response(JSON.stringify({ playing: false }), {
+				headers: { 'Content-Type': 'application/json' }
+			});
+		}
 
-		if (!data || !data.is_playing) return new Response(JSON.stringify({ playing: false }));
+		const data: SpotifyCurrentlyPlaying = JSON.parse(text);
 
+		if (!data || !data.is_playing || !data.item) {
+			return new Response(JSON.stringify({ playing: false }), {
+				headers: { 'Content-Type': 'application/json' }
+			});
+		}
+
+		const id = data.item.id;
 		const song = data.item.name;
 		const artist = data.item.artists.map((a) => a.name).join(', ');
 		const cover = data.item.album.images[0]?.url || '';
 
-		return new Response(JSON.stringify({ playing: true, song, artist, cover }));
+		return new Response(JSON.stringify({ playing: true, song, artist, cover, id }), {
+			headers: { 'Content-Type': 'application/json' }
+		});
 	} catch (error) {
 		console.error('Spotify API error:', error);
-		return new Response(JSON.stringify({ playing: false }));
+		return new Response(JSON.stringify({ playing: false }), {
+			headers: { 'Content-Type': 'application/json' }
+		});
 	}
 }
