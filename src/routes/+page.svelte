@@ -1,6 +1,19 @@
 <script>
 	import Section from '$lib/components/Section.svelte';
 	import ListItem from '$lib/components/ListItem.svelte';
+	import { onMount } from 'svelte';
+	let currentlyPlaying = 'nothing';
+	let coverImage = '';
+
+	onMount(async () => {
+		const res = await fetch('/api/spotify');
+		const data = await res.json();
+
+		if (data.playing) {
+			currentlyPlaying = `${data.song} - ${data.artist}`;
+			coverImage = data.cover;
+		}
+	});
 </script>
 
 <div class=" flex max-h-screen min-h-screen flex-col items-center justify-center">
@@ -25,6 +38,12 @@
 			<ListItem text="Listening to kpop" underline={true} />
 			<ListItem text="Playing piano" />
 			<ListItem text="Going on 5km runs" />
+			{#if currentlyPlaying !== 'nothing'}
+				<ListItem text={`Listening to ${currentlyPlaying}`} underline={true} />
+				<img src={coverImage} alt="Album cover" class="h-16 w-16 rounded" />
+			{:else}
+				<ListItem text="Listening to nothing" />
+			{/if}
 		</Section>
 
 		<Section title="Where I've been">
