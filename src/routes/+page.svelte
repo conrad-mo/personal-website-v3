@@ -17,17 +17,17 @@
 	});
 </script>
 
-<div class=" flex max-h-screen min-h-screen flex-col items-center justify-center">
-	<div class="flex flex-col gap-8">
-		<div class="flex flex-col gap-2 text-2xl text-gray-200">
-			<h1 class="text-4xl font-bold">
+<div class="flex min-h-screen flex-col items-center justify-center px-4 py-8 sm:px-6 md:px-8">
+	<div class="flex w-full max-w-2xl flex-col gap-6 sm:gap-8">
+		<div class="flex flex-col gap-2 text-lg text-gray-200 sm:text-xl md:text-2xl">
+			<h1 class="text-2xl font-bold sm:text-3xl md:text-4xl">
 				<span class="bg-linear-to-r from-[#FFD3A5] to-[#FFB6B0] bg-clip-text text-transparent">
 					> Hi! I'm Conrad Mo
 				</span>
 			</h1>
 			Computer science student at the University of Toronto
 		</div>
-		<div class="text-gray-400">
+		<div class="text-sm text-gray-400 sm:text-base">
 			I&apos;m a software engineer passionate about creating software that makes everyday life
 			easier and more enjoyable.<br />
 			I have a strong curiosity, love solving challenging problems, and enjoy collaborating with others
@@ -54,7 +54,7 @@
 			<ListItem text="Northern Labs" url={'https://www.northernlabs.ca/'} />
 		</Section>
 		<hr class="border-b border-[#FFB6B0]" />
-		<div class="flex items-end gap-4">
+		<div class="flex flex-wrap items-end gap-3 sm:gap-4">
 			<SocialLink href="/Conrad_Mo_resume.pdf" icon={FileUser} label="Resume" />
 
 			<SocialLink href="https://www.linkedin.com/in/conradmo/" icon={Linkedin} label="LinkedIn" />
@@ -62,7 +62,7 @@
 			<SocialLink href="https://github.com/conrad-mo" icon={Github} label="Github" />
 		</div>
 		<footer>
-			<p class="text-gray-400">© 2025 Conrad Mo. All rights reserved.</p>
+			<p class="text-xs text-gray-400 sm:text-sm">© 2025 Conrad Mo. All rights reserved.</p>
 		</footer>
 	</div>
 </div>

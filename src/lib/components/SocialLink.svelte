@@ -10,17 +10,12 @@
 >
 	{#if Icon}
 		<Icon
-			size={20}
-			class="self-end text-gray-400
-			       transition-colors
-			       group-hover:text-[#FFB6B0]"
+			class="h-4 w-4 self-end text-gray-400 transition-colors group-hover:text-[#FFB6B0] sm:h-5 sm:w-5"
 		/>
 	{/if}
 
 	<span
-		class="relative m-0 p-0 leading-none text-gray-400
-		       transition-colors
-		       group-hover:text-[#FFB6B0]"
+		class="relative m-0 p-0 text-sm leading-none text-gray-400 transition-colors group-hover:text-[#FFB6B0] sm:text-base"
 	>
 		{label}
 	</span>
