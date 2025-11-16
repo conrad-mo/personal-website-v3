@@ -2,6 +2,8 @@
 	import Section from '$lib/components/Section.svelte';
 	import ListItem from '$lib/components/ListItem.svelte';
 	import { onMount } from 'svelte';
+	import SocialLink from '$lib/components/SocialLink.svelte';
+	import { FileUser, Linkedin, Github } from '@lucide/svelte';
 	let currentlyPlaying = $state('nothing');
 	let currentlyPlayingId = $state('');
 	onMount(async () => {
@@ -35,7 +37,7 @@
 		<Section title="Things I do">
 			{#if currentlyPlaying !== 'nothing'}
 				<ListItem
-					text={`Listening to ${currentlyPlaying}`}
+					text={`Listen to ${currentlyPlaying}`}
 					showIcon={true}
 					underline={true}
 					url={`https://open.spotify.com/track/${currentlyPlayingId}`}
@@ -68,5 +70,16 @@
 				url={'https://www.northernlabs.ca/'}
 			/>
 		</Section>
+		<hr class="border-b border-[#FFB6B0]" />
+		<div class="flex items-end gap-4">
+			<SocialLink href="/Conrad_Mo_resume.pdf" icon={FileUser} label="Resume" />
+
+			<SocialLink href="https://www.linkedin.com/in/conradmo/" icon={Linkedin} label="LinkedIn" />
+
+			<SocialLink href="https://github.com/conrad-mo" icon={Github} label="Github" />
+		</div>
+		<footer>
+			<p class="text-gray-400">© 2025 Conrad Mo. All rights reserved.</p>
+		</footer>
 	</div>
 </div>
