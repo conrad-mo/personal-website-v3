@@ -18,8 +18,8 @@
 </script>
 
 <main class="flex min-h-screen flex-col items-center justify-center px-4 py-8 sm:px-6 md:px-8">
-	<div class="flex w-full max-w-170 flex-col gap-6 sm:gap-8">
-		<div class="flex flex-col gap-2 text-lg text-gray-200 sm:text-xl md:text-2xl">
+	<div class="flex w-full max-w-170 flex-col gap-4">
+		<div class="flex flex-col text-lg text-gray-200 sm:gap-2 sm:text-xl md:text-2xl">
 			<h1 class="text-2xl font-bold sm:text-3xl md:text-4xl">
 				<span class="bg-linear-to-r from-[#FFD3A5] to-[#FFB6B0] bg-clip-text text-transparent">
 					> Hi! I'm Conrad Mo
