@@ -43,7 +43,7 @@
 			{:else}
 				<ListItem text="Listen to kpop" />
 			{/if}
-			<ListItem text="Eat food at new places" />
+			<ListItem text="Eat food at new places" url={`https://beliapp.co/app/conradmo`} />
 			<ListItem text="Play piano" />
 			<ListItem text="Go on 5km runs" />
 		</Section>
