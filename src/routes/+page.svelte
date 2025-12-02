@@ -41,7 +41,10 @@
 					url={`https://open.spotify.com/track/${currentlyPlayingId}`}
 				/>
 			{:else}
-				<ListItem text="Listen to kpop" />
+				<ListItem
+					text="Listen to kpop"
+					url={`https://open.spotify.com/user/ag8c2igijt3qza4nu6j7n7vp9?si=a4095c84eacf46d9`}
+				/>
 			{/if}
 			<ListItem text="Eat food at new places" url={`https://beliapp.co/app/conradmo`} />
 			<ListItem text="Play piano" />
