@@ -52,7 +52,8 @@
 		</Section>
 
 		<Section title="Where I've been">
-			<ListItem text="Shopify" url={'https://www.shopify.com/ca'} />
+			<ListItem text="Coinbase" url={'https://www.coinbase.com/'} />
+			<ListItem text="Shopify" url={'https://www.shopify.com/'} />
 			<ListItem text="Hack the Valley" url={'https://hackthevalley.io/'} />
 			<ListItem text="Northern Labs" url={'https://www.northernlabs.ca/'} />
 		</Section>
