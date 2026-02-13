@@ -6,7 +6,7 @@
 <li>
 	{#if url}
 		<a href={url} class="inline-flex items-center" target="_blank" rel="noopener noreferrer">
-			<span class="break-all">-&nbsp;</span>
+			<span class="break-all">&bull;&nbsp;</span>
 			<span class="group relative inline-flex items-center wrap-break-word">
 				<span class="break-all">{text}</span>
 				<ArrowUpRight
@@ -21,7 +21,8 @@
 		</a>
 	{:else}
 		<span class="group relative inline-flex items-center">
-			- {text}
+			<span class="break-all">&bull;&nbsp;</span>
+			{text}
 		</span>
 	{/if}
 </li>
