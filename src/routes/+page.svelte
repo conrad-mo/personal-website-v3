@@ -66,7 +66,7 @@
 			<SocialLink href="https://github.com/conrad-mo" icon={Github} label="Github" />
 		</div>
 		<footer>
-			<p class="text-xs text-gray-400 sm:text-sm">© 2025 Conrad Mo. All rights reserved.</p>
+			<p class="text-xs text-gray-400 sm:text-sm">© 2026 Conrad Mo. All rights reserved.</p>
 		</footer>
 	</div>
 </main>
