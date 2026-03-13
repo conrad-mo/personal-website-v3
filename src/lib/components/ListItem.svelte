@@ -5,6 +5,7 @@
 
 <li>
 	{#if url}
+		<!-- eslint-disable-next-line -->
 		<a href={url} class="inline-flex items-center" target="_blank" rel="noopener noreferrer">
 			<span class="break-all">&bull;&nbsp;</span>
 			<span class="group relative inline-flex items-center wrap-break-word">

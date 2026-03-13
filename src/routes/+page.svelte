@@ -43,19 +43,19 @@
 			{:else}
 				<ListItem
 					text="Listen to kpop"
-					url={`https://open.spotify.com/user/ag8c2igijt3qza4nu6j7n7vp9?si=a4095c84eacf46d9`}
+					url="https://open.spotify.com/user/ag8c2igijt3qza4nu6j7n7vp9?si=a4095c84eacf46d9"
 				/>
 			{/if}
-			<ListItem text="Eat food at new places" url={`https://beliapp.co/app/conradmo`} />
+			<ListItem text="Eat food at new places" url="https://beliapp.co/app/conradmo" />
 			<ListItem text="Play piano" />
 			<ListItem text="Go on 5km runs" />
 		</Section>
 
 		<Section title="Where I've been">
-			<ListItem text="Coinbase" url={'https://www.coinbase.com/'} />
-			<ListItem text="Shopify" url={'https://www.shopify.com/'} />
-			<ListItem text="Hack the Valley" url={'https://hackthevalley.io/'} />
-			<ListItem text="Northern Labs" url={'https://www.northernlabs.ca/'} />
+			<ListItem text="Coinbase" url="https://www.coinbase.com/" />
+			<ListItem text="Shopify" url="https://www.shopify.com/" />
+			<ListItem text="Hack the Valley" url="https://hackthevalley.io/" />
+			<ListItem text="Northern Labs" url="https://www.northernlabs.ca/" />
 		</Section>
 		<hr class="border-b border-[#FFB6B0]" />
 		<div class="flex flex-wrap items-end gap-3 sm:gap-4">
