@@ -25,7 +25,7 @@
 					> Hi! I'm Conrad Mo
 				</span>
 			</h1>
-			Computer science student at the University of Toronto
+			Computer Science @ University of Toronto
 		</div>
 		<div class="text-sm text-gray-400 sm:text-base">
 			I&apos;m a software engineer passionate about creating software that makes everyday life
@@ -66,7 +66,7 @@
 			<SocialLink href="https://github.com/conrad-mo" icon={Github} label="Github" />
 		</div>
 		<footer>
-			<p class="text-xs text-gray-400 sm:text-sm">© 2026 Conrad Mo. All rights reserved.</p>
+			<p class="text-xs text-gray-400 sm:text-sm">© 2026 Conrad Mo — living life fully</p>
 		</footer>
 	</div>
 </main>
