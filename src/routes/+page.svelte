@@ -19,7 +19,7 @@
 
 <main class="flex min-h-screen flex-col items-center justify-center px-4 py-8 sm:px-6 md:px-8">
 	<div class="flex w-full max-w-170 flex-col gap-6">
-		<div class="flex flex-col text-lg text-gray-200 sm:gap-2 sm:text-xl md:text-2xl">
+		<div class="flex flex-col text-lg font-normal text-gray-200 sm:gap-2 sm:text-xl md:text-2xl">
 			<h1 class="text-2xl font-semibold sm:text-3xl md:text-4xl">
 				<span class="bg-linear-to-r from-[#FFD3A5] to-[#FFB6B0] bg-clip-text text-transparent">
 					> Hi! I'm Conrad Mo
@@ -27,7 +27,7 @@
 			</h1>
 			Computer science student at the University of Toronto
 		</div>
-		<div class="text-sm font-light text-gray-400 sm:text-base">
+		<div class="text-sm text-gray-400 sm:text-base">
 			I&apos;m a software engineer passionate about creating software that makes everyday life
 			easier and more enjoyable.<br />
 			I have a strong curiosity, love solving challenging problems, and enjoy collaborating with others
@@ -66,9 +66,7 @@
 			<SocialLink href="https://github.com/conrad-mo" icon={Github} label="Github" />
 		</div>
 		<footer>
-			<p class="text-xs font-light text-gray-400 sm:text-sm">
-				© 2026 Conrad Mo. All rights reserved.
-			</p>
+			<p class="text-xs text-gray-400 sm:text-sm">© 2026 Conrad Mo. All rights reserved.</p>
 		</footer>
 	</div>
 </main>

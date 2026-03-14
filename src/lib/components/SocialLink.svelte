@@ -15,7 +15,7 @@
 	{/if}
 
 	<span
-		class="relative m-0 p-0 text-sm leading-none font-light text-gray-400 transition-colors group-hover:text-[#FFB6B0] sm:text-base"
+		class="relative m-0 p-0 text-sm leading-none text-gray-400 transition-colors group-hover:text-[#FFB6B0] sm:text-base"
 	>
 		{label}
 	</span>
