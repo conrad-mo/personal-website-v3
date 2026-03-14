@@ -8,9 +8,32 @@
 	box-sizing: border-box;
 }
 
+@font-face {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 300;
+	font-display: swap;
+	src: url('$lib/assets/fonts/inter-latin-300-normal.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url('$lib/assets/fonts/inter-latin-400-normal.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 600;
+	font-display: swap;
+	src: url('$lib/assets/fonts/inter-latin-600-normal.woff2') format('woff2');
+}
+
 html,
 body {
 	font-family: 'Inter', sans-serif;
+	/* font-weight: 300; */
 	color: var(--foreground);
 	background: var(--background);
 	height: 100%;

@@ -9,7 +9,7 @@
 		<a href={url} class="inline-flex items-center" target="_blank" rel="noopener noreferrer">
 			<span class="break-all">&bull;&nbsp;</span>
 			<span class="group relative inline-flex items-center wrap-break-word">
-				<span class="break-all">{text}</span>
+				<span class="font-light break-all">{text}</span>
 				<ArrowUpRight
 					size={16}
 					color="#FFB6B0"
@@ -21,7 +21,7 @@
 			</span>
 		</a>
 	{:else}
-		<span class="group relative inline-flex items-center">
+		<span class="group relative inline-flex items-center font-light">
 			<span class="break-all">&bull;&nbsp;</span>
 			{text}
 		</span>
